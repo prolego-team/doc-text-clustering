@@ -514,7 +514,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "15f1e79a70564c6034fc53b6f3644666d7f8abaf067ffd8f6abb8e3eadd667d0"
+content-hash = "de3400cc2d4600d75b9f258c3f5486696c7026bc607e9f0bfd23c6fec50d6c4f"
 
 [metadata.files]
 atomicwrites = [
