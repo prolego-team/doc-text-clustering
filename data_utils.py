@@ -11,7 +11,7 @@ import numpy as np
 
 @dataclass
 class Label:
-    label: str
+    label: int
     score: float
 
 @dataclass
