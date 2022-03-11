@@ -11,6 +11,8 @@ import splitters
 @pytest.mark.use_fixtures("text")
 def test_NewLineSplitter(text: str):
     """
+    test that a list of TextExample is created,
+    and that the id is set using the id_prefix
     """
     splitter = splitters.NewLineSplitter(id_prefix="sampleid-")
     examples = splitter(text)
