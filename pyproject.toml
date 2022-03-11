@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "doc-text-clustering"
+version = "0.1.0"
+description = "clustering on document text using transformer embeddings"
+authors = ["Alex Cunliffe <alex@prolego.io>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.4"
+scikit-learn = "^1.0.2"
+sentence-transformers = "^2.2.0"
+torch = "^1.11.0"
+hdbscan = "^0.8.28"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
