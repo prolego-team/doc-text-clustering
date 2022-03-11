@@ -38,8 +38,8 @@ class NewLineSplitter(Splitter):
                 TextExample(
                     text=text,
                     id=self.id_prefix + str(i),
-                    embedding=[],
-                    labels=[]
+                    embedding=None,
+                    labels=None
                 )
             )
         return examples
