@@ -37,11 +37,22 @@ def main(txt_filepath: str) -> None:
     labeller = labellers.HDBScanLabeller()
     labelled_examples = labeller(examples_with_embeddings)
 
-    # TODO: pretty print results
+    # group by label
+    labels_and_text = {}
     for example in labelled_examples:
-        print(example.text)
-        print(example.labels[0].label)
-        print("---")
+        for label in example.labels:
+            if label.label not in labels_and_text.keys():
+                labels_and_text[label.label] = [example.text]
+            else:
+                labels_and_text[label.label].append(example.text)
+
+    # pretty print results
+    print("-----")
+    for label, texts in labels_and_text.items():
+        print("Label: ", label)
+        for text in texts:
+            print(repr(text))
+        print("-----")
 
 
 if __name__ == "__main__":
