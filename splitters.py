@@ -39,7 +39,7 @@ class NewLineSplitter(Splitter):
                     text=text,
                     id=self.id_prefix + str(i),
                     embedding=None,
-                    labels=None
+                    cluster_labels=None
                 )
             )
         return examples

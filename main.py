@@ -48,7 +48,7 @@ def main(txt_filepath: str) -> None:
 
     # pretty print results
     print("-----")
-    for label, texts in labels_and_text.items():
+    for label, texts in sorted(labels_and_text.items()):
         print("Label: ", label)
         for text in texts:
             print(repr(text))
