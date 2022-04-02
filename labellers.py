@@ -44,7 +44,7 @@ class HDBScanLabeller():
         # populate labels in examples
         out_examples = deepcopy(examples)
         for example, cluster_label, score in zip(out_examples, cluster_labels, scores):
-            example.labels = [Label(label=cluster_label, score=score)]
+            example.cluster_labels = [Label(label=cluster_label, score=score)]
         return out_examples
 
 

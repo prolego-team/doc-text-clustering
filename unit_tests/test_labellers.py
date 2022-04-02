@@ -21,6 +21,6 @@ def test_HDBScanLabeller(examples_with_embeddings: List[TextExample]) -> None:
     assert type(labelled_examples) == list
     assert len(labelled_examples) == len(examples_with_embeddings)
     for example in labelled_examples:
-        assert example.labels is not None
-        assert len(example.labels) == 1
-        assert type(example.labels[0]) == Label
+        assert example.cluster_labels is not None
+        assert len(example.cluster_labels) == 1
+        assert type(example.cluster_labels[0]) == Label

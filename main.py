@@ -40,7 +40,7 @@ def main(txt_filepath: str) -> None:
     # group by label
     labels_and_text = {}
     for example in labelled_examples:
-        for label in example.labels:
+        for label in example.cluster_labels:
             if label.label not in labels_and_text.keys():
                 labels_and_text[label.label] = [example.text]
             else:
@@ -48,7 +48,7 @@ def main(txt_filepath: str) -> None:
 
     # pretty print results
     print("-----")
-    for label, texts in labels_and_text.items():
+    for label, texts in sorted(labels_and_text.items()):
         print("Label: ", label)
         for text in texts:
             print(repr(text))
